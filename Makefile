@@ -9,8 +9,8 @@ BUILD_DIR = build
 
 C_SOURCES = \
 system.c \
-main.c
-
+main.c \
+leds.c
 
 
 OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(SOURCE_DIR)/$(C_SOURCES:.c=.o)))

@@ -6,5 +6,5 @@
 В результате компиляции и сборки проекта должен появится elf-файл:
 ``` code
    text	   data	    bss	    dec	    hex	filename
-    748	      0	    260	   1008	    3f0	build/start-ch32v.elf
+    936	      0	    260	   1196	    4ac	build/start-ch32v.elf
 ```

@@ -26,6 +26,8 @@ void HardFault_Handler(void)
 
 /**
 *   Обработчик прерывания от системного таймера
+*
+*   Прерывание возникает 10 раз в секунду
 */
 __attribute__((interrupt("WCH-Interrupt-fast")))
 void SysTick_Handler(void)
@@ -45,7 +47,7 @@ void system_initSystick(void)
   NVIC_EnableIRQ(SysTick_IRQn);
 
   SysTick->SR   = 0;
-  SysTick->CMP  = 24000000 - 1;
+  SysTick->CMP  = 2400000 - 1;  // 100 мc
   SysTick->CNT  = 0;
   SysTick->CTLR = 0xF;
 }
